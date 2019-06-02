@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>SMS Text</title>
+</head>
+<body bgcolor="aqua">
+  <div class="container" style="
+  margin-top: 500px;
+  margin-left: 300px;
+">
+    <h2>Envoyer un SMS</h2>
+    <input type="tel" name="number" id="number" placeholder="Entrez le numéro de téléphone..." style="
+    width: 241.979166px;
+    height: 38.979166px;
+">
+    <input type="text" name="msg" id="msg" placeholder="Entrer un message texte..." style="
+    width: 261.979166px;
+">
+    <select name="schedule" id="schedule">
+      <option value="0">envoyer un message</option>
+      <option value="1">Après 1 minutes</option>
+      <option value="2">Après 2 minutes</option>
+      <option value="5">Après 5 minutes</option>
+      <option value="10">Après 10 minutes</option>
+      <option value="60">Après 1 heure</option>
+    </select>
+    <input type="button" id="button" value="Send Text" class="button button-primary">
+    <p class="response"></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
